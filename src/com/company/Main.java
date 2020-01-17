@@ -12,18 +12,23 @@ public class Main {
       ArrayList<Integer>  myNumb = new ArrayList<Integer>(Arrays.asList(new Integer[]{1,2,3,4,5,6,}));
     doubleNumber(myNumb);
         System.out.println(doubleNumber(myNumb));
+//        ********************
 
         ArrayList<Integer>  arrOfNums = new ArrayList<Integer>(Arrays.asList(new Integer[]{1,2,3,4,5,6,}));
         System.out.println(multiplyNumbers(arrOfNums,4));
+//        ********************
 
         System.out.println(doubleLetters("blah"));
-
+//        ********************
         ArrayList<String>arr1 = new ArrayList<String>(Arrays.asList("a", "b", "c"));
         ArrayList<String>arr2 = new ArrayList<String>(Arrays.asList("d", "e", "f"));
         System.out.println(interleave(arr1,arr2));
+//        ********************
 
-//        ArrayList<String>str1 = new ArrayList<String>(Arrays.asList("Blah"));
         System.out.println(createRange("blah",2));
+//        ********************
+        ArrayList<String>str1 = new ArrayList<String>(Arrays.asList("blue", "green","purple"));
+        System.out.println(flipArray(str1));
 
     }
 
@@ -73,7 +78,11 @@ public class Main {
 
     }
 //
-//    public static HashMap<String, Integer> flipArray(ArrayList<String> arrOfStr) {
-//
-//    }
+    public static HashMap<String, Integer> flipArray(ArrayList<String> arrOfStr) {
+        HashMap<String, Integer> acc = new HashMap<String, Integer>();
+      for(int i = 0; i < arrOfStr.size();i++){
+          acc.put(arrOfStr.get(i),i);
+      }
+        return acc;
+    }
     }
